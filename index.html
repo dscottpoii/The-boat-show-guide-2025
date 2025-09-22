@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Boat Show Guide - Save Thousands on Your Next Boat</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* Header Section */
+        .header {
+            background: linear-gradient(135deg, #0066cc 0%, #004499 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 1.4em;
+            opacity: 0.95;
+        }
+        
+        /* Alert Bar */
+        .alert {
+            background: #ff6b6b;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        /* Main Form Section */
+        .form-section {
+            background: white;
+            padding: 40px 20px;
+        }
+        
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        
+        .form-container h2 {
+            text-align: center;
+            color: #0066cc;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+        
+        .form-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        input {
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            transition: border-color 0.3s;
+        }
+        
+        input:focus {
+            outline: none;
+            border-color: #0066cc;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background: #218838;
+        }
+        
+        .privacy {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        /* Benefits Section */
+        .benefits {
+            background: #0066cc;
+            color: white;
+            padding: 60px 20px;
+        }
+        
+        .benefits-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .benefits h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .benefit-item {
+            text-align: center;
+        }
+        
+        .benefit-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+        
+        .benefit-title {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+        
+        /* What's Inside Section */
+        .inside {
+            background: white;
+            padding: 60px 20px;
+        }
+        
+        .inside-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .inside h2 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #0066cc;
+            margin-bottom: 40px;
+        }
+        
+        .checklist {
+            list-style: none;
+            font-size: 1.2em;
+        }
+        
+        .checklist li {
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .checklist li:before {
+            content: "✅ ";
+            font-size: 1.3em;
+            margin-right: 10px;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background: #f8f9fa;
+            padding: 60px 20px;
+        }
+        
+        .testimonials h2 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #0066cc;
+            margin-bottom: 40px;
+        }
+        
+        .testimonial-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        .testimonial p {
+            font-style: italic;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: #0066cc;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        
+        .footer a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .form-container {
+                padding: 25px;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Alert Bar -->
+    <div class="alert">
+        ⚡ Boat Show Season Special: Get Your Free Guide Today!
+    </div>
+    
+    <!-- Header -->
+    <div class="header">
+        <h1>The Boat Show Insider's Guide</h1>
+        <p>15 Secrets That Save You Thousands When Buying a Boat</p>
+    </div>
+    
+    <!-- Main Form Section -->
+    <div class="form-section">
+        <div class="form-container">
+            <h2>Get Your Free Guide</h2>
+            <p class="form-subtitle">Join 2,847+ smart boat buyers who saved money</p>
+            
+            <!-- IMPORTANT: Replace the action URL with your email service -->
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your First Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Email Address" required>
+                </div>
+                <button type="submit" class="submit-btn">
+                    📧 Send My Free Guide Now!
+                </button>
+            </form>
+            
+            <p class="privacy">🔒 Your information is 100% secure and never shared</p>
+        </div>
+    </div>
+    
+    <!-- Benefits Section -->
+    <div class="benefits">
+        <div class="benefits-container">
+            <h2>Why You Need This Guide</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">💰</div>
+                    <div class="benefit-title">Save Thousands</div>
+                    <p>Average reader saves $8,500 on their boat purchase</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">⏱️</div>
+                    <div class="benefit-title">Save Time</div>
+                    <p>Know exactly what to look for and what to avoid</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🎯</div>
+                    <div class="benefit-title">Buy Smart</div>
+                    <p>Insider tactics dealers don't want you to know</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- What's Inside Section -->
+    <div class="inside">
+        <div class="inside-container">
+            <h2>What's Inside Your Free Guide</h2>
+            <ul class="checklist">
+                <li>The #1 negotiation phrase that instantly drops prices 10-15%</li>
+                <li>Why you should NEVER buy on Saturday (and when to go instead)</li>
+                <li>The "hidden costs checklist" that reveals the true price</li>
+                <li>5 questions that expose overpriced boats immediately</li>
+                <li>How to get dealers competing for your business</li>
+                <li>The financing trick that saves $200+ per month</li>
+                <li>Red flags that signal a bad deal (miss these at your peril)</li>
+                <li>Plus: Boat Show Schedule & Dealer Contact Templates</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Testimonials -->
+    <div class="testimonials">
+        <h2>What Boat Buyers Are Saying</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial">
+                <p>"This guide literally saved me $12,000 on my SeaRay. The financing section alone was worth thousands!"</p>
+                <div class="testimonial-author">- Michael T., Florida</div>
+            </div>
+            <div class="testimonial">
+                <p>"I was about to make every mistake in the book. This guide changed everything. Absolutely essential reading!"</p>
+                <div class="testimonial-author">- Sarah M., California</div>
+            </div>
+            <div class="testimonial">
+                <p>"The negotiation scripts worked exactly as described. Dealer dropped the price by $8,500!"</p>
+                <div class="testimonial-author">- David L., Texas</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <div class="footer">
+        <p>© 2025 Boat Show Insider Guide | <a href="mailto:your-email@gmail.com">Contact</a> | <a href="#">Privacy Policy</a></p>
+        <p style="margin-top: 10px;">Free Guide Created for Serious Boat Buyers</p>
+    </div>
+</body>
+</html>
